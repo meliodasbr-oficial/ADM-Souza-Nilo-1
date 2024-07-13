@@ -1,4 +1,4 @@
-package com.admsouzanilo.ui.gallery;
+package com.admsouzanilo.ui.simulator;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.admsouzanilo.databinding.FragmentGalleryBinding;
+import com.admsouzanilo.databinding.FragmentSimulatorBinding;
 
-public class GalleryFragment extends Fragment {
+public class SimulatorFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+    private FragmentSimulatorBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        SimulatorViewModel simulatorViewModel =
+                new ViewModelProvider(this).get(SimulatorViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentSimulatorBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textSimulator;
+        simulatorViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

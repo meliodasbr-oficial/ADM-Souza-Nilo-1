@@ -1,4 +1,4 @@
-package com.admsouzanilo.ui.slideshow;
+package com.admsouzanilo.ui.Inicio;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,23 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.admsouzanilo.databinding.FragmentSlideshowBinding;
+import com.admsouzanilo.databinding.FragmentInicioBinding;
+import com.admsouzanilo.databinding.FragmentInicioBinding;
 
-public class SlideshowFragment extends Fragment {
+public class InicioFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentInicioBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        InicioViewModel homeViewModel =
+                new ViewModelProvider(this).get(InicioViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentInicioBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textHome;
+        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

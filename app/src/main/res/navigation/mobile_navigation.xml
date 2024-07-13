@@ -7,19 +7,24 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.admsouzanilo.ui.home.HomeFragment"
+        android:name="com.admsouzanilo.ui.Inicio.InicioFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_inicio" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.admsouzanilo.ui.gallery.GalleryFragment"
+        android:name="com.admsouzanilo.ui.Materials.MaterialsFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_materials" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.admsouzanilo.ui.slideshow.SlideshowFragment"
+        android:name="com.admsouzanilo.ui.videoaulas.VideoAulasFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_videoaulas" />
+    <fragment
+        android:id="@+id/nav_simulator"
+        android:name="com.admsouzanilo.ui.simulator.SimulatorFragment"
+        android:label="@string/menu_simulator"
+        tools:layout="@layout/fragment_simulator" /><action android:id="@+id/action_global_nav_simulator" app:destination="@id/nav_simulator"/>
 </navigation>

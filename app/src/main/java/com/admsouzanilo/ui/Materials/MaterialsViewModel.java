@@ -1,16 +1,16 @@
-package com.admsouzanilo.ui.home;
+package com.admsouzanilo.ui.Materials;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class MaterialsViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public MaterialsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("Em Breve!");
     }
 
     public LiveData<String> getText() {
